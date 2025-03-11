@@ -39,7 +39,12 @@ const Navbar = () => {
                 <li><a>Item 3</a></li>
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end gap-2">
+                <input
+                    type="checkbox"
+                    value="dark"
+                    className="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-gray-300 [--tglbg:var(--color-sky-500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:var(--color-blue-900)]" 
+                />
                 <Link to="https://github.com/Coded-Adil" className="btn btn-outline btn-info">
                 <img className="w-5 h-5" src="https://i.ibb.co.com/GvBJ3gWK/githublogoforportfolio.png" alt="" />
                 Github
