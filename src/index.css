@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark;
+  themes: light --default, dim --prefersdark;
 }
 @theme {
     --font-exo: "Exo 2", sans-serif;
     --font-code: "Source Code Pro", monospace;
   
     --animate-blob: blob 7s infinite;
+}
+
+/* Custom styles for dark mode */
+[data-theme="dark"] {
+  --color-primary-content: #8d59c5;
+  --color-secondary-content: #7dd3fc;
+  --color-success-content: #f9a8d4;
+}
+
+/* Custom styles for light mode */
+[data-theme="light"] {
+  --color-primary-content: #d8b4fe;
+  --color-secondary-content: #7dd3fc;
+  --color-success-content: #f9a8d4;
 }
   
 @keyframes blob {

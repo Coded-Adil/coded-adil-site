@@ -7,9 +7,9 @@ const Banner = () => {
         <div className="hero max-w-6xl mx-auto min-h-screen">
             <div className="hero-content gap-6 flex-col lg:flex-row-reverse">
                 <div className='relative'>
-                    <div className='absolute top-0 -left-4 mix-blend-multiply w-48 h-48 md:w-70 md:h-70 bg-purple-300 rounded-full filter blur-xl opacity-70 animate-blob'></div>
-                    <div className='absolute top-0 -right-2 mix-blend-multiply w-48 h-48 md:w-70 md:h-70 bg-sky-300 rounded-full filter blur-xl opacity-70 animate-blob animation-delay-2000'></div>
-                    <div className='absolute -bottom-8 left-20 mix-blend-multiply w-48 h-48 md:w-70 md:h-70 bg-pink-300 rounded-full filter blur-xl opacity-70 animate-blob animation-delay-4000'></div>
+                    <div className='absolute top-0 -left-4 mix-blend-multiply w-48 h-48 md:w-70 md:h-70 bg-primary-content rounded-full filter blur-xl opacity-70 animate-blob'></div>
+                    <div className='absolute top-0 -right-2 mix-blend-multiply w-48 h-48 md:w-70 md:h-70 bg-secondary-content rounded-full filter blur-xl opacity-70 animate-blob animation-delay-2000'></div>
+                    <div className='absolute -bottom-8 left-20 mix-blend-multiply w-48 h-48 md:w-70 md:h-70 bg-success-content rounded-full filter blur-xl opacity-70 animate-blob animation-delay-4000'></div>
                     <motion.img
                     src={banner}
                     animate={{y: [10, 50, 10]}}
