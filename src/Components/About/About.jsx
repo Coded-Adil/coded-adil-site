@@ -1,5 +1,6 @@
 import { GiPenguin } from 'react-icons/gi';
 import adil from '../../../public/adil.jpg'
+import { Typewriter } from "react-simple-typewriter";
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 const About = () => {
     const x = useMotionValue(0);
@@ -38,6 +39,14 @@ const About = () => {
         y.set(0)
     }
 
+    const handleType = (count) => {
+        console.log(count);
+    };
+
+    const handleDone = () => {
+        console.log(`Done after 5 loops!`);
+    };
+
     return (
         <div className="hero max-w-6xl mx-auto min-h-screen">
             <div className="hero-content gap-6 flex-col lg:flex-row">
@@ -58,8 +67,21 @@ const About = () => {
                     className="max-w-xs rounded-lg shadow-2xl" />
                 </motion.div>
                 <div className='max-w-xl m-4 animate__animated animate__fadeInRight'>
-                    <h1 className=" flex gap-2 text-4xl font-bold"><GiPenguin />About Me</h1>
-                    <p className="py-6">
+                    <h1 className=" flex gap-2 text-4xl font-bold font-code"><GiPenguin />
+                        About
+                        <Typewriter
+                        words={[" Me", "Coded-Adil", "Adil Rahman", "Myself"]}
+                        loop={5}
+                        cursor
+                        cursorStyle="_"
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                        onLoopDone={handleDone}
+                        onType={handleType}
+                        />
+                    </h1>
+                    <p className="py-6 font-exo">
                         Hello! I’m Adil Rahman, a passionate MERN Stack Developer with 8-9 months of hands-on experience 
                         in building modern, scalable web applications. Currently pursuing my BSc in Computer Science and Engineering, 
                         I’ve built a strong foundation in programming with C, C++, and Java (OOP), which honed my problem-solving skills 

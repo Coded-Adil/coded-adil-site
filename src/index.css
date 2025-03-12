@@ -12,9 +12,9 @@
 
 /* Custom styles for dark mode */
 [data-theme="dark"] {
-  --color-primary-content: #8d59c5;
-  --color-secondary-content: #7dd3fc;
-  --color-success-content: #f9a8d4;
+  --color-primary-content: #b696da;
+  --color-secondary-content: #62c8f8;
+  --color-success-content: #fac2e1;
 }
 
 /* Custom styles for light mode */
