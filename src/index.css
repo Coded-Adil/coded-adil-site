@@ -47,7 +47,8 @@
         animation-delay: 4000ms;
     }
 }
-/* .exo-2-text {
-    font-family: "Exo 2", sans-serif;
-    font-optical-sizing: auto;
-} */
+
+.social:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to top right, #7dd3fc, #3b82f6);
+}
