@@ -48,7 +48,7 @@ const About = () => {
     };
 
     return (
-        <div className="hero max-w-6xl mx-auto min-h-screen">
+        <div className="hero max-w-6xl mx-auto my-8">
             <div className="hero-content gap-6 flex-col lg:flex-row">
                 <motion.div 
                 className='relative h-[340px] w-[340px] grid place-content-center bg-sky-300 rounded-xl' 
@@ -70,7 +70,7 @@ const About = () => {
                     <h1 className=" flex gap-2 text-4xl font-bold font-code"><GiPenguin />
                         About
                         <Typewriter
-                        words={[" Me", " Coded-Adil", " Adil Rahman", " Myself"]}
+                        words={[" Me", " Coded-Adil", " Adil Rahman"]}
                         loop={50}
                         cursor
                         cursorStyle="_"

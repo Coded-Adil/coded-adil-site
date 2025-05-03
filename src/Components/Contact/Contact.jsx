@@ -13,11 +13,11 @@ const Contact = () => {
         console.log(`Done after 5 loops!`);
     };
     return (
-        <div className="flex flex-col justify-center items-center py-20">
+        <div className="flex flex-col justify-center items-center">
             <div className="mb-4 text-center font-code text-3xl lg:text-4xl font-exo font-bold">
                 Contact 
                 <Typewriter
-                words={[" Me", " Coded-Adil", " Adil Rahman", " Myself"]}
+                words={[" Me", " Coded-Adil", " Adil Rahman"]}
                 loop={50}
                 cursor
                 cursorStyle="_"

@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "title": "Fundy",
+        "category": "Fintech Platform",
+        "shortDescription": "A funding platform connecting innovators with resources to bring ideas to life.",
+        "projectImage": "https://i.ibb.co.com/0ycHy9Rh/fundy.png",
+        "githubRepo": "https://github.com/Coded-Adil/fundy-client-site",
+        "liveSite": "https://fundy-292a6.web.app",
+        "technologies": [
+            "React",
+            "Node.js",
+            "Firebase",
+            "MongoDB",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "KindWarm",
+        "category": "Social Good Platform",
+        "shortDescription": "A donation platform connecting winter essentials with vulnerable communities.",
+        "projectImage": "https://i.ibb.co.com/606vmB1s/kindwarm.png",
+        "githubRepo": "https://github.com/Coded-Adil/KindWarm",
+        "liveSite": "https://kindwarm-e93ed.web.app",
+        "technologies": [
+            "React",
+            "Firebase",
+            "Google Maps API",
+            "Tailwind CSS",
+            "Node.js"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Got-It",
+        "category": "Community Service",
+        "shortDescription": "A lost-and-found platform to reunite items with owners using secure, user-friendly tools.",
+        "projectImage": "https://i.ibb.co.com/5hLXK55F/gotit.png",
+        "githubRepo": "https://github.com/Coded-Adil/gotit-client-site",
+        "liveSite": "https://got-it-7ccaa.web.app",
+        "technologies": [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Firebase"
+        ]
+    }
+]
