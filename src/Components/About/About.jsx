@@ -73,7 +73,7 @@ const About = () => {
                     <h1 className=" flex gap-2 text-4xl font-bold font-code"><GiPenguin />
                         About
                         <Typewriter
-                            words={[" Me", " Coded-Adil", " Adil Rahman"]}
+                            words={[" Me" ]}
                             loop={50}
                             cursor
                             cursorStyle="_"

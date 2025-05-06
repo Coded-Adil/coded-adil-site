@@ -44,7 +44,7 @@ const Contact = () => {
             <div className="mb-4 text-center font-code text-3xl lg:text-4xl font-exo font-bold text-white">
                 Contact
                 <Typewriter
-                    words={[" Me", " Coded-Adil", " Adil Rahman"]}
+                    words={[" Me", " Coded-Adil" ]}
                     loop={50}
                     cursor
                     cursorStyle="_"
