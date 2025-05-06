@@ -40,7 +40,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center p-8 bg-gradient-to-tr from-[#7dd3fc] to-[#3b82f6] rounded-2xl">
+        <div className="flex flex-col justify-center items-center p-8 bg-gradient-to-tr from-[#1e3a8a] to-[#0f172a] rounded-2xl">
             <div className="mb-4 text-center font-code text-3xl lg:text-4xl font-exo font-bold text-white">
                 Contact
                 <Typewriter

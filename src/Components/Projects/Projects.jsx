@@ -10,7 +10,7 @@ const Projects = () => {
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className="bg-white/20 hover:bg-gradient-to-tr from-[#7dd3fc] to-[#3b82f6] text-center space-y-3 backdrop-blur-md rounded-xl p-4 shadow-md border border-white/30 hover:scale-105 transition-transform"
+                        className="bg-white/20 hover:bg-gradient-to-tr from-[#1e3a8a] to-[#0f172a] hover:text-white text-center space-y-3 backdrop-blur-md rounded-xl p-4 shadow-md border border-white/30 hover:scale-105 transition-transform"
                     >
                         <img
                             src={project.projectImage}
@@ -21,7 +21,7 @@ const Projects = () => {
                         <p className="mb-4">{project.shortDescription}</p>
                         <div className='flex justify-center items-center gap-2'>
                             <a
-                                href={project.link}
+                                href={project.liveSite}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
@@ -29,7 +29,7 @@ const Projects = () => {
                                 Live Site
                             </a>
                             <a
-                                href={project.link}
+                                href={project.githubRepo}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition"
