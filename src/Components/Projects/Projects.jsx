@@ -24,7 +24,7 @@ const Projects = () => {
                                 href={project.liveSite}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                                className="inline-block px-4 py-2 btn btn-info text-white rounded-full transition"
                             >
                                 Live Site
                             </a>
@@ -32,7 +32,7 @@ const Projects = () => {
                                 href={project.githubRepo}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition"
+                                className="inline-block px-4 py-2 bg-gray-600 text-white rounded-full hover:bg-gray-700 transition"
                             >
                                 Github
                             </a>
