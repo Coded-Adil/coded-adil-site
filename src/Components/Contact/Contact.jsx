@@ -1,42 +1,109 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaDiscord, FaInstagram, FaXTwitter } from "react-icons/fa6";
-import { SiGmail } from "react-icons/si";
 import { Typewriter } from "react-simple-typewriter";
 import 'animate.css';
+import { toast } from 'react-hot-toast';
+import { useState } from 'react';
+import { div } from "motion/react-client";
 
 const Contact = () => {
-    const handleType = (count) => {
-        console.log(count);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleDone = () => {
-        console.log(`Done after 5 loops!`);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const res = await fetch("https://formsubmit.co/ajax/itsadil2022@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (res.ok) {
+                toast.success("Message submitted successfully!");
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                toast.error("Failed to submit message.");
+            }
+        } catch (err) {
+            toast.error("Something went wrong!");
+            console.error(err);
+        }
     };
+
     return (
-        <div className="flex flex-col justify-center items-center">
-            <div className="mb-4 text-center font-code text-3xl lg:text-4xl font-exo font-bold">
-                Contact 
+        <div className="flex flex-col justify-center items-center p-8 bg-gradient-to-tr from-[#7dd3fc] to-[#3b82f6] rounded-2xl">
+            <div className="mb-4 text-center font-code text-3xl lg:text-4xl font-exo font-bold text-white">
+                Contact
                 <Typewriter
-                words={[" Me", " Coded-Adil", " Adil Rahman"]}
-                loop={50}
-                cursor
-                cursorStyle="_"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-                onLoopDone={handleDone}
-                onType={handleType}
+                    words={[" Me", " Coded-Adil", " Adil Rahman"]}
+                    loop={50}
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
                 />
             </div>
-            <div className="flex flex-col md:flex-row gap-6 mx-auto my-6">
-                <a href="https://github.com/Coded-Adil" className="social animate__animated animate__zoomIn text-5xl bg-gradient-to-tr from-sky-300 to-blue-500 rounded-full shadow-2xl p-4" target="block"><FaGithub /></a>
-                <a href="https://www.linkedin.com/in/coded-adil" className="social animate__animated animate__zoomIn text-5xl bg-gradient-to-tr from-sky-300 to-blue-500 rounded-full shadow-2xl p-4" target="block"><FaLinkedin /></a>
-                <a href="https://discord.com/channels/@__akuma.__" className="social animate__animated animate__zoomIn text-5xl bg-gradient-to-tr from-sky-300 to-blue-500 rounded-full shadow-2xl p-4" target="block"><FaDiscord /></a>
-                <a href="https://www.instagram.com/_.adil_rahman._" className="social animate__animated animate__zoomIn text-5xl bg-gradient-to-tr from-sky-300 to-blue-500 rounded-full shadow-2xl p-4" target="block"><FaInstagram /></a>
-                <a href="https://x.com/adil_xr" className="social animate__animated animate__zoomIn text-5xl bg-gradient-to-tr from-sky-300 to-blue-500 rounded-full shadow-2xl p-4" target="block"><FaXTwitter /></a>
-                <a href="mailto:itsadil2022@gmail.com?subject=Inquiry&body=Hello, I would like 
-                to know more about..." className="social animate__animated animate__zoomIn text-5xl bg-gradient-to-tr from-sky-300 to-blue-500 rounded-full shadow-2xl p-4" target="block"><SiGmail /></a>
-            </div>
+
+            <form
+                onSubmit={handleSubmit}
+                className="w-full max-w-xl bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-md space-y-4"
+            >
+                <div>
+                    <label className="block text-white font-semibold mb-1">Full Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        placeholder="Enter your full name"
+                        className="w-full p-3 rounded-md bg-white/60 text-black placeholder-gray-700 outline-none focus:ring-2 focus:ring-blue-300"
+                    />
+                </div>
+
+                <div>
+                    <label className="block text-white font-semibold mb-1">Email Address</label>
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        placeholder="Enter your email"
+                        className="w-full p-3 rounded-md bg-white/60 text-black placeholder-gray-700 outline-none focus:ring-2 focus:ring-blue-300"
+                    />
+                </div>
+
+                <div>
+                    <label className="block text-white font-semibold mb-1">Message</label>
+                    <textarea
+                        name="message"
+                        rows="5"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        placeholder="Write your message..."
+                        className="w-full p-3 rounded-md bg-white/60 text-black placeholder-gray-700 outline-none focus:ring-2 focus:ring-blue-300"
+                    />
+                </div>
+
+                <button
+                    type="submit"
+                    className="w-full py-3 bg-blue-600 hover:bg-blue-700 transition-all text-white font-bold rounded-md shadow-lg"
+                >
+                    Send Message
+                </button>
+            </form>
         </div>
     );
 };

@@ -17,7 +17,7 @@ const Banner = () => {
                     className="max-w-xs rounded-lg" />
                 </div>
                 <div className='max-w-xl m-4 animate__animated animate__fadeInLeft'>
-                    <h1 className="text-5xl font-code font-bold">Frontend Developer</h1>
+                    <h1 className="text-4xl font-code font-bold">MERN Stack Developer</h1>
                     <p className="py-6 font-exo">
                         Welcome to my creative corner! I'm <span className='font-bold'>Adil Rahman</span>, a passionate frontend developer dedicated 
                         to building visually stunning, user-friendly, and responsive web experiences. With a keen 
